@@ -1,0 +1,59 @@
+package slam4_sujet3_objMetier;
+
+public class Cru {
+	
+	private int cru_code = -1;
+	private String cru_nom;
+	Region regionCru;
+	
+	
+	
+	
+	public Cru(String cru_nom, Region regionCru) {
+		super();
+		// TODO Auto-generated constructor stub
+		
+		this.cru_nom = cru_nom;
+		this.regionCru = regionCru;
+	}
+
+
+
+
+	public Cru(int cru_code, String cru_nom, Region regionCru) {
+		super();
+		// TODO Auto-generated constructor stub
+		
+		this.cru_code = cru_code;
+		this.cru_nom = cru_nom;
+		this.regionCru = regionCru;
+	}
+
+
+
+
+	public int getCru_code() {
+		return cru_code;
+	}
+
+
+
+
+	public void setCru_code(int cru_code) {
+		this.cru_code = cru_code;
+	}
+
+
+
+
+	public String getCru_nom() {
+		return cru_nom;
+	}
+
+
+
+
+	public void setCru_nom(String cru_nom) {
+		this.cru_nom = cru_nom;
+	}
+}
