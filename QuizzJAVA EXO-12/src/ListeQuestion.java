@@ -23,6 +23,7 @@ public class ListeQuestion {
 
 	public void play() {
 		Scanner scn = new Scanner(System.in);
+		int score = 0;
 		for (int i = 0; i < listeQuestion.size(); i++) {
 			Question question =  listeQuestion.get(i);		
 			System.out.println(question.getQuestion());			
@@ -30,15 +31,13 @@ public class ListeQuestion {
 			
 			if (question.ValideReponse(responseUser)) {
 				System.out.println("Bonne réponse");
+				score++;
+				
 			}else {
 				System.out.println("Mauvaise réponse");
 			}
-			
-			
-			
-			
-			
 		}
+		System.out.println("Bravo ! Vous avez marqué "+ score +" points sur "+ listeQuestion.size());
 		
 	}
 }

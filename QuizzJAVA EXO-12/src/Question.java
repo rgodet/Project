@@ -10,7 +10,7 @@ import java.util.List;
 	public Question(String question, Object reponse) {
 		super();
 		this.question = question;
-		this.reponse = reponse;
+		this.setReponse(reponse);
 		
 	}
  
@@ -19,12 +19,20 @@ import java.util.List;
 	}
  
 	public boolean ValideReponse(Object reponse) {
-		return this.reponse.equals(reponse);
+		return this.getReponse().equals(reponse);
 	}
 
 	@Override
 	public String toString() {
-		return "Question" + question + ", reponse=" + reponse + "]";
+		return "Question" + question + ", reponse=" + getReponse() + "]";
+	}
+
+	public Object getReponse() {
+		return reponse;
+	}
+
+	public void setReponse(Object reponse) {
+		this.reponse = reponse;
 	}
 	
  
